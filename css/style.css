@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:rgb(252, 204, 228);
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    background: rgba(243, 236, 234, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(82, 3, 68, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(209, 37, 137);
+    width:100px;
+    height: 100px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 15px solid rgb(252, 15, 145);
+
+}
+
+.cross{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.cross::after, .cross::before{
+    content: "";
+    background-color: rgb(149, 55, 204);
+    position: absolute;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.cross::after{
+    width: 105% ;
+    height: 30%;
+    top:  40%;
+}
+.cross::before{
+    height: 105% ;
+    width: 30%;
+    left:  40%;
+
+}
+
+p{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color:  rgb(62, 4, 95);
+}
